@@ -1,4 +1,4 @@
-# Laravel 8 Alpha Vantage 具象狀態傳輸應用程式介面用戶端
+# Laravel 9 Alpha Vantage 具象狀態傳輸應用程式介面用戶端
 
 Alpha Vantage 通過一組功能強大且對開發人員友好的 API 提供企業級金融市場數據。從傳統資產類別（例如股票和 指數股票型基金（ETF））到外匯和加密貨幣，從基本數據到技術指標，Alpha Vantage 是您通過基於雲端的 API、Excel 和 Google 試算表提供的全球市場數據的一站式商店。
 
@@ -23,8 +23,8 @@ $ php artisan key:generate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/huE5Iow.png)
+![](https://i.imgur.com/3vsctWo.png)
 > 取得每六十分鐘的日內資訊
 
-![](https://i.imgur.com/JNmlbPi.png)
+![](https://i.imgur.com/jwmMdIY.png)
 > 取得最新的貨幣匯率資訊
