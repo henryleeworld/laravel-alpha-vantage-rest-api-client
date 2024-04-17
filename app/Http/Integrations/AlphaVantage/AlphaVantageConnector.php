@@ -1,23 +1,23 @@
 <?php
 
-namespace App\Services;
+namespace App\Http\Integrations\AlphaVantage;
 
 use GuzzleHttp\Client;
 
 /**
- * Alpha vantage service
+ * Alpha vantage connector
  *
  * @filesource
  */
-class AlphaVantageService
+final readonly class AlphaVantageConnector
 {
     /**
      * @var client
      */
-    protected $client;
+    private Client $client;
 
     /**
-     * Instantiate a new AlphaVantageService instance.
+     * Instantiate a new AlphaVantageConnector instance.
      *
      * @param Client $client Client
      *
@@ -38,7 +38,7 @@ class AlphaVantageService
     private function getQueryString(array $queryStringAry = []): array
     {
         return array_merge($queryStringAry, [
-            'apikey'  => config('alpha-vantage.api_key'),
+            'apikey'  => config('services.alpha-vantage.api_key'),
         ]);
     }
 
@@ -52,7 +52,7 @@ class AlphaVantageService
      */
     public function makeHttpRequest(string $endpoint, array $queryStringAry = [])
     {
-        $response = $this->client->request('GET', config('alpha-vantage.base_url') . $endpoint, [
+        $response = $this->client->request('GET', config('services.alpha-vantage.base_url') . $endpoint, [
             'query' => $this->getQueryString($queryStringAry),
             'curl' => [
                 CURLOPT_FOLLOWLOCATION => true,
