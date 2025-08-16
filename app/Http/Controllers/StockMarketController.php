@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Integrations\AlphaVantage\AlphaVantageConnector;
-use Carbon\Carbon;
+use Illuminate\Support\Carbon;
 
 class StockMarketController extends Controller
 {
     private $alphaVantageConnector;
 
     /**
-     * Instantiate a new StockMarketController instance.
-     *
-     * @param AlphaVantageConnector $alphaVantageConnector
-     *
-     * @return Response
+     * Create a new controller instance.
      */
     public function __construct(AlphaVantageConnector $alphaVantageConnector)
     {
@@ -23,8 +19,6 @@ class StockMarketController extends Controller
 
     /**
      * Get currency exchange rate.
-     *
-     * @return Response
      */
     public function getCurrencyExchangeRate()
     {
@@ -41,8 +35,6 @@ class StockMarketController extends Controller
 
     /**
      * Get time series intraday.
-     *
-     * @return Response
      */
     public function getTimeSeriesIntraday()
     {

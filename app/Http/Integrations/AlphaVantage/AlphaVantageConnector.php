@@ -18,10 +18,6 @@ final readonly class AlphaVantageConnector
 
     /**
      * Instantiate a new AlphaVantageConnector instance.
-     *
-     * @param Client $client Client
-     *
-     * @return void
      */
     public function __construct(Client $client)
     {
@@ -30,10 +26,6 @@ final readonly class AlphaVantageConnector
 
     /**
      * Get query string.
-     *
-     * @param array $queryStringAry Query string array
-     *
-     * @return array query string array
      */
     private function getQueryString(array $queryStringAry = []): array
     {
@@ -44,11 +36,6 @@ final readonly class AlphaVantageConnector
 
     /**
      * Make Http Request
-     *
-     * @param string $endpoint       Endpoint
-     * @param array  $queryStringAry Query string array
-     *
-     * @return mixed
      */
     public function makeHttpRequest(string $endpoint, array $queryStringAry = [])
     {

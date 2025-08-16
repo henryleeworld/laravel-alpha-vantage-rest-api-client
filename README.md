@@ -1,4 +1,4 @@
-# Laravel 11 Alpha Vantage 具象狀態傳輸應用程式介面用戶端
+# Laravel 12 Alpha Vantage 具象狀態傳輸應用程式介面用戶端
 
 Alpha Vantage 通過一組功能強大且對開發人員友好的 API 提供企業級金融市場數據。從傳統資產類別（例如股票和 指數股票型基金（ETF））到外匯和加密貨幣，從基本數據到技術指標，Alpha Vantage 是您通過基於雲端的 API、Excel 和 Google 試算表提供的全球市場數據的一站式商店。
 
@@ -16,6 +16,10 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
+```sh
+$ php artisan migrate
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/alpha_vantage/time_series_intraday` 來進行 Alpha Vantage 日內時間序列資訊取得。
 - 你可以經由 `/alpha_vantage/currency_exchange_rate` 來進行 Alpha Vantage 貨幣匯率取得。
@@ -23,8 +27,8 @@ $ php artisan key:generate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/EuICIYu.png)
+![](https://i.imgur.com/9NTm1hz.png)
 > 取得每六十分鐘的日內資訊
 
-![](https://i.imgur.com/TEzUzeU.png)
+![](https://i.imgur.com/pleQayr.png)
 > 取得最新的貨幣匯率資訊
